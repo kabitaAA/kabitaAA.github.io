@@ -1,204 +1,195 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/assets/jquery.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
-<style>
-body {
-  font-family: pacifico, sans-serif;
-  margin: 0 auto;
-  max-width: 500px;
-  background: #232323;
-  text color: blue;
-}
-ul {
-  padding: 10px;
-  background: rgba(0,0,0,0.5);
-  text-align: center;
-}
-   li {
-    display: inline;
-    padding: 0px 10px 0px 10px;
-  }
-div {
-  height: 300px;
-  background-size: cover;
-  position: relative;
-  margin: 40px 0 0 0;
-  border-radius: 12px;
-  font-family: fantasy;
-  color: blue;
-}
-h1 {
-  font-family: 'Anton', sans-serif;
-  text-align: center;
-  font-size: 80px;
-  color: white;
-  margin: 60px 0 0 0;
-}
-h2 {
-  text-align: center;
-  color: black;
-  margin: 0px 0 70px 0;
-  font-size: 30px;
-  font-family: Lobster;
-}
-p {
-  color: rgba(140,200,255,1);
-  background: black;
-  background: linear-gradient(bottom, rgba(150,100,200,1), rgba(230,140,240,.4));
-  background: -webkit-linear-gradient(bottom, rgba(150,100,200,1), rgba(230,14024,0,.4));
-  background: -moz-linear-gradient(bottom, rgba(150,100,200,1), rgba(230,140,240,.4));
-  padding: 5px;
-  line-height: 20px;
-  text-align: justify;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  height: 10px;
-  transition: height .5s;
-  -webkit-transition: height .5s;
-  -moz-transition: height .5s;
-}
+  <title>Delicious</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-small {
-  opacity: 0;
-}
-
-.show-description p {
-  height: 150px;
-}
-
-.show-description small {
-  opacity: 1;
-}
-body {
-  background-color:pink;
-}
-.price {
-  float: right;
-}
-@media (max-width: 500px) {
-  h1 {
-    font-size: 50px;
-    margin-top: 20px;
-    line-height: 40px;
-  }
-  h2 {
-    font-size: 20px;
-    margin: 20px 0 30px 0;
-  }
-  div {
-    margin: 20px 12px 0 12px;
-  }
-  p {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  small {
-    font-size: 16px;
-  }
-}
-
-</style>
-
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Open+Sans|Francois+One|Candal|Roboto|Teko|Anton|Varela+Round|PT+Sans">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- =======================================================
+    Theme Name: Delicious
+    Theme URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
 </head>
 
 <body>
-    <ul>
-      <li><button onclick=Hotdrinks()>Hot Drinks</button></li>
-      <li><button onclick=Frappuccinos()>Frappuccinos</button></li>
-      <li><button onclick=Nutritions()>Nutritions</button></li>
-    </ul>
+  <!--banner-->
+  <section id="banner">
+    <div class="bg-color">
+      <header id="header">
+        <div class="container">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#menu-list">WHO IS PEWDIEPIE??</a>
+            <a href="#contact">WHY YOU SHOULD SUBSCRIBE To PEWDS??</a>
+          </div>
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="inner text-center">
+            <h1 class="logo-name"></h1>
+            <h2>Subscribe to PEWDIEPIE</h2>
+            <p>Join the 9year old army.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / banner -->
+  <!-- menu -->
+  <section id="menu-list" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center marb-35">
+          <h1 class="header-h">PEWDIEPIEs pic</h1>
+          <p class="header-p">PEWDIEPIE is the most subscribed youtuber 
+            <br>with over 89 million subscriber. </p>
+        </div>
 
-<h1>Coffeee Corner</h1>
-<h2>Everything starts with coffee</h2>
+        <div class="col-md-12  text-center" id="menu-flters">
+          <ul>
+            <li><a class="filter active" data-filter=".menu-restaurant">Show All</a></li>
+            <li><a class="filter" data-filter=".breakfast">Breakfast</a></li>
+            <li><a class="filter" data-filter=".lunch">Lunch</a></li>
+            <li><a class="filter" data-filter=".dinner">Dinner</a></li>
+          </ul>
+        </div>
 
-<div id="dfgh"> </div>
+        <div id="menu-wrapper">
 
-<script>
-HotdrinksImages = [
-  'url("http://www.runningwithspoons.com/wp-content/uploads/2017/09/Mocha-Overnight-Oatmeal-Smoothie.jpg")',
-  'url("https://cdn.gearpatrol.com/wp-content/uploads/2013/03/latte-photo.jpg")',
-  'url("https://thebusybaker.ca/wp-content/uploads/2017/09/slow-cooker-chai-tea-latte-fbig1.jpg")',
-]
+          <div class="breakfast menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhOG5ncEN-pAWFJ0en5dnHqxhImCpn1zl7X_LGdrsxqLsRhHd4Hg"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">Take that brofist!!</span>
+            </span>
+            <span class="menu-subtitle">Fan art by ssunny_boi</span>
+          </div>
 
-FrappuccinosImages = [
-  'url(https://ccs1-jl7jxm3ukfwyutip.netdna-ssl.com/wp-content/uploads/2015/06/Homemade-Mocha-Frappuccino-made-in-just-2-minutes-crunchycreamysweet.com_.jpg)',
-  'url("http://laughandshare.com/wp-content/uploads/2015/07/want-to-make-starbucks-secret-re.jpg")',
-  'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAqPitCKp1gQXizPmnds9X6jtwQAnVcjDFhlEZN7c26D871Ccp")',
-]
+          <div class="breakfast menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://i.redd.it/dbeihy3dv2201.jpg" style="width:30%"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle">I know u love that beard-pewdiepie</span>
+          </div>
 
-NutritionsImages = [
-  'url(https://globalassets.starbucks.com/assets/87f21f8061a14430a99abbb1f242a5cb.jpg)',
-  'url(https://globalassets.starbucks.com/assets/d4667dcf1b3d48f086546f2c75a679de.jpg)',
-  'url(https://upload.wikimedia.org/wikipedia/commons/a/ac/Bacon%2C_egg%2C_and_cheese_on_bread.jpg)',
-]
+          <div class="breakfast menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Br2ZE-yiTXvZYvdNnC4Xy_Nr2reeeZn3OLAsPh0hmAva7pD0"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle"></span>
+          </div>
 
-HotdrinksDivs = [
-  '<div class="item" onclick=this.classList.toggle("show-description")><p>Hot espresso<span class="price">$5.50</span><br /><small>In its pure form, espresso is more popular in Europe than America, particularly in Italy. Though catching in America, derivatives and misconceptions are spreading like cream in coffee. For instance, many hold the misconception that espresso is a dark, bitter to burnt-flavored roast of coffee.</small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Mocha<span class="price">$5</span><br /><small> Caffè mocha, in its most basic formulation, can also be referred to as hot chocolate with (e.g., a shot of) espresso added. Like cappuccino, caffè mochas typically contain the distinctive milk froth on top, although, as is common with hot chocolate, they are sometimes served with whipped cream instead. They are usually topped with a dusting of either cinnamon or cocoa powder, and marshmallows may also be added on top for flavor and decoration. </small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Chai tea Latte<span class="price">$8</span><br/> <small>Milk, Water, Chai Tea Concentrate [An Infusion Of (Water, Black Tea, Cardamom, Black Pepper, Ginger, Cinnamon, Cloves, Natural Flavours, Star Anise), Sugar, Honey, Ginger Juice, Natural Flavours, Vanilla, Citric Acid].</small></p></div>',
-]
+          <div class="breakfast menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://cdna.artstation.com/p/assets/images/images/014/381/592/large/lokmen-ben-hmida-bitch-lasanya-pewdiepie-fanart-3.jpg?1543756585" style="width:50%"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle">Go and listen to Bitch lasagna in youtube, spotify and itunes</span>
+          </div>
 
-FrappuccinosDivs = [
-  '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate frappuccinos<span class="price">$6.50</span><br /><small>In its pure form, chocolate frappico  is more popular in America than other countries, particularly in USA. Though catching in America, derivatives and misconceptions are spreading like cream in coffee. For instance, many hold the misconception that mocha is a dark, bitter to burnt-flavored roast of coffee.</small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Mocha frappuccino<span class="price">$6</span><br /><small> Caffè mocha, in its most basic formulation, can also be referred to as hot chocolate with (e.g., a shot of) espresso added. Like cappuccino, caffè mochas typically contain the distinctive milk froth on top, although, as is common with hot chocolate, they are sometimes served with whipped cream instead. They are usually topped with a dusting of either cinnamon or cocoa powder, and marshmallows may also be added on top for flavor and decoration. </small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>vanilla bean frappuccino<span class="price">$8</span><br/> <small>made with bean and vanilla].</small></p></div>',
-]
-NutritionsDivs = [
-  '<div class="item" onclick=this.classList.toggle("show-description")><p>mixed fruit oat meal<span class="price">$8.0</span><br /><small>Its a oat meal made with mixed frits.really healthy and tasty to have in the morning.</small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>nutrition pack<span class="price">$10</span><br /><small>Is from our secret menu tha we made for you which is rich in nutritions.</small></p></div>',
-'<div class="item" onclick=this.classList.toggle("show-description")><p>egg and bacon cheese<span class="price">$10</span><br/> <small>made with organicegg and bacon.].</small></p></div>',
-]
+          <div class="lunch menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvKkSNgsmJk3zd-8vqQL6RIexp_S8g8HgpNfNYzZSVKN1_Fje0_w"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle">Unsubscribe from t-series</span>
+          </div>
 
-function Hotdrinks() {
-qwerty = document.getElementById("dfgh")
-qwerty.innerHTML = '' 
-qwerty.innerHTML += HotdrinksDivs[0]
-qwerty.innerHTML += HotdrinksDivs[1]
-qwerty.innerHTML += HotdrinksDivs[2]
- //alert("sdjgdsj")
- items = document.getElementsByClassName("item")
-  items[0].style.background = HotdrinksImages[0]
-  items[0].style.backgroundSize = '100% 100%'
-  items[1].style.background = HotdrinksImages[1]
-  items[1].style.backgroundSize = '100% 100%'
-  items[2].style.background = HotdrinksImages[2]
-  items[2].style.backgroundSize = '100% 100%'
-}
+          <div class="lunch menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://cdna.artstation.com/p/assets/images/images/008/934/442/large/johnson-ting-9-15.jpg?1516184813" style="width:50%"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle">That's our queen</span>
+          </div>
 
-function Frappuccinos() {
-qwerty = document.getElementById("dfgh")
-qwerty.innerHTML = '' 
-qwerty.innerHTML += FrappuccinosDivs[0]
-qwerty.innerHTML += FrappuccinosDivs[1]
-qwerty.innerHTML += FrappuccinosDivs[2]
- //alert("hjdfgbj")
- items = document.getElementsByClassName("item")
-  items[0].style.background = FrappuccinosImages[0]
-  items[0].style.backgroundSize = '100% 100%'
-  items[1].style.background = FrappuccinosImages[1]
-  items[1].style.backgroundSize = '100% 100%'
-  items[2].style.background = FrappuccinosImages[2]
-  items[2].style.backgroundSize = '100% 100%'
-}
+          <div class="lunch menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/62ea44c7-77a2-4915-ad5c-ab707dedbbdb/dcqth7h-cfe4f230-d92d-41c4-92d2-ed787ac75812.png/v1/fill/w_1600,h_960,q_80,strp/pewdiepie_vs__t_series_by_prettyxthexartist_dcqth7h-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvNjJlYTQ0YzctNzdhMi00OTE1LWFkNWMtYWI3MDdkZWRiYmRiXC9kY3F0aDdoLWNmZTRmMjMwLWQ5MmQtNDFjNC05MmQyLWVkNzg3YWM3NTgxMi5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.whDaUBbbqHQ2dmtN7FZlq8DOZSQ0Vmtmeu_GueLeJxM" style="width:70%"></a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$20.99</span>
+            </span>
+            <span class="menu-subtitle">take that!!</span>
+          </div>
+        </div>
 
-function Nutritions() {
-qwerty = document.getElementById("dfgh")
-qwerty.innerHTML = '' 
-qwerty.innerHTML += NutritionsDivs[0]
-qwerty.innerHTML += NutritionsDivs[1]
-qwerty.innerHTML += NutritionsDivs[2]
- //alert("jcnc")
- items = document.getElementsByClassName("item")
-  items[0].style.background = NutritionsImages[0]
-  items[0].style.backgroundSize = '100% 100%'
-  items[1].style.background = NutritionsImages[1]
-  items[1].style.backgroundSize = '100% 100%'
-  items[2].style.background = NutritionsImages[2]
-  items[2].style.backgroundSize = '100% 100%'
-}
-</script>
+      </div>
+    </div>
+  </section>
+  <!--/ menu -->
+  <!-- contact -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="header-h">Let's Win This War Together By "Subscribing To Pewdiepie"</h1>
+          <p class="header-p">This war is Pewdiepie v.s t-series 
+            <br>"NOT PEWDIEPIE V.S INDIA."</p>
+        </div>
+      </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / contact -->
+  <!-- footer -->
+  <footer class="footer text-center">
+    <div class="footer-top">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 text-center">
+          <div class="widget">
+            <h4 class="widget-title">Click that link to Subscribe to Pewdiepie</h4>
+            <address>Don't say the N word'<br>Don't forget to turn the notification bell on'</address>
+            <div class="social-list">
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </div>
+            <p class="copyright clear-float">
+              do ittttttttt.
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Delicious
+                -->
+                Designed by <a href="https://bootstrapmade.com/">A 9year old whamen</a>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / footer -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
 
 </body>
+
+</html>
