@@ -131,6 +131,7 @@ function restart() {
   time = 60
   score = 0
   level = 1
+  z = 4
   loop()
   bts.innerHTML = ""
   generate_leaderboard()
