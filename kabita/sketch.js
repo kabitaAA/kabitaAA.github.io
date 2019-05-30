@@ -96,6 +96,7 @@ function draw() {
   fill(239,2,117)
   circle(d*s,k,30*s)
   circle(x*s,y,50*s) 
+  if (touches.length == 0)   {
   if (keyIsDown(LEFT_ARROW)){
   x = x - 10
   }
@@ -108,6 +109,13 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)){
   y = y + 10
   }	
+  }
+  else { 
+		x = touches[0].x
+		y = touches[0].y
+  }
+	  
+	  
   if (dist( x*s, y, d*s, k) < 50*s + 30*s) {
 	 score=score+1
   }
