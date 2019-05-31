@@ -5,7 +5,7 @@ html, body {
   overflow: hidden; 
   overscroll-behavior: none;
 }
-#____________, #___________ input, button {
+#bts, #bts input, button {
 	font-size: 120%;
 }
 canvas {
