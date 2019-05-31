@@ -5,6 +5,9 @@ html, body {
   overflow: hidden; 
   overscroll-behavior: none;
 }
+#____________, #___________ input, button {
+	font-size: 120%;
+}
 canvas {
   display: block;
 }
